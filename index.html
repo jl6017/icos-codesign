@@ -2,13 +2,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
 body{font-family:system-ui,sans-serif;margin:0;color:#222;background:#fff}
-.viewer{width:100%;height:92vh;border:0;display:block}
+.viewer{width:100%;height:85vh;border:0;display:block}
 .figs{max-width:1100px;margin:2rem auto;padding:0 1rem}
 .figs h2{font-size:1.25rem;margin:2rem 0 .5rem}
 figure{margin:1.2rem 0}figure img{width:100%;border:1px solid #eee}figcaption{font-size:.9rem;color:#555;margin-top:.4rem}
 .small{font-size:.85rem;color:#666}
+.hdr{max-width:1100px;margin:1.5rem auto 1rem;padding:0 1rem}
+.hdr h1{font-size:1.6rem;margin:0 0 .4rem;line-height:1.25}
+.hdr .authors{margin:.2rem 0;font-size:1rem}.hdr .venue{margin:.2rem 0 .8rem;color:#555}.hdr .blurb{color:#333;font-size:.95rem;line-height:1.45}
 </style></head>
 <body>
+<header class="hdr">
+<h1>Locomotion Selects for Symmetry: Evolutionary Co-Design of Legged Robots on an Icosahedral Body</h1>
+<p class="authors">Jiong Lin, Yue Yao, Hod Lipson &mdash; Creative Machines Lab, Columbia University</p>
+<p class="venue">IROS 2026 Workshop on Learning-based Robot Co-design &middot; <a href="https://github.com/jl6017/icos-codesign">Code &amp; figures</a></p>
+<p class="blurb">Legged robots on a regular icosahedron are co-designed &mdash; morphology by evolution, control by reinforcement learning &mdash; with fitness awarded only for displacement in any direction. Symmetry is scored exactly against the icosahedron's 15 reflection planes and compared with a drift baseline. In an abstract simulator populations become more symmetric than drift; in a simulator built from the fabricable robot's CAD the effect shrinks by an order of magnitude and no longer predicts the winner. Below: the interactive morphology viewer, then the paper figures.</p>
+</header>
+<h2 class="hdr" style="margin-bottom:.4rem">Interactive morphology viewer</h2>
 <iframe class="viewer" src="viewer/index.html" title="Interactive morphology viewer"></iframe>
 <section class="figs">
 <h2>Paper figures</h2>
