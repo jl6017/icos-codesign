@@ -1,0 +1,347 @@
+{
+ "abs_variant": "absvis",
+ "morphologies": [
+  {
+   "id": "quadruped",
+   "label": "Q4",
+   "legs": 4,
+   "species": "(3,3,3,3) hand-designed",
+   "spaces": {
+    "abstract": {
+     "glb": "quadruped_abs.glb",
+     "meta": "quadruped_abs.json",
+     "clips": {
+      "flat": {
+       "source": "quadruped_r4d2_d25m_sci_traj.npz",
+       "displacement_final_m": 7.863314151763916,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "tripod",
+   "label": "T3",
+   "legs": 3,
+   "species": "(4,4,4) hand-designed",
+   "spaces": {
+    "abstract": {
+     "glb": "tripod_abs.glb",
+     "meta": "tripod_abs.json",
+     "clips": {
+      "flat": {
+       "source": "tripod_r4d2_d25m_traj.npz",
+       "displacement_final_m": 11.221039772033691,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "mixed",
+   "label": "M5",
+   "legs": 5,
+   "species": "(3,3,2,2,2) hand-designed",
+   "spaces": {
+    "abstract": {
+     "glb": "mixed_abs.glb",
+     "meta": "mixed_abs.json",
+     "clips": {
+      "flat": {
+       "source": "mixed_r4d2_d25m_traj.npz",
+       "displacement_final_m": 3.1600773334503174,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "hexapod",
+   "label": "H6",
+   "legs": 6,
+   "species": "(2,2,2,2,2,2) hand-designed",
+   "spaces": {
+    "abstract": {
+     "glb": "hexapod_abs.glb",
+     "meta": "hexapod_abs.json",
+     "clips": {
+      "flat": {
+       "source": "hexapod_r4d2_d25m_traj.npz",
+       "displacement_final_m": 3.461322784423828,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_444_0",
+   "label": "A3a",
+   "legs": 3,
+   "species": "(4,4,4)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_444_0_abs.glb",
+     "meta": "g0_444_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_444_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 17.417781829833984,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_444_1",
+   "label": "A3b",
+   "legs": 3,
+   "species": "(4,4,4)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_444_1_abs.glb",
+     "meta": "g0_444_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_444_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 12.909680366516113,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_3333_0",
+   "label": "B4a",
+   "legs": 4,
+   "species": "(3,3,3,3)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_3333_0_abs.glb",
+     "meta": "g0_3333_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_3333_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 9.818580627441406,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_3333_1",
+   "label": "B4b",
+   "legs": 4,
+   "species": "(3,3,3,3)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_3333_1_abs.glb",
+     "meta": "g0_3333_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_3333_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 8.866023063659668,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_4332_0",
+   "label": "C4a",
+   "legs": 4,
+   "species": "(4,3,3,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_4332_0_abs.glb",
+     "meta": "g0_4332_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_4332_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 8.375825881958008,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_4332_1",
+   "label": "C4b",
+   "legs": 4,
+   "species": "(4,3,3,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_4332_1_abs.glb",
+     "meta": "g0_4332_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_4332_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 7.590313911437988,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_4422_0",
+   "label": "D4a",
+   "legs": 4,
+   "species": "(4,4,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_4422_0_abs.glb",
+     "meta": "g0_4422_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_4422_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 6.198394298553467,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_4422_1",
+   "label": "D4b",
+   "legs": 4,
+   "species": "(4,4,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_4422_1_abs.glb",
+     "meta": "g0_4422_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_4422_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 10.943243026733398,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_42222_0",
+   "label": "E5a",
+   "legs": 5,
+   "species": "(4,2,2,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_42222_0_abs.glb",
+     "meta": "g0_42222_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_42222_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 9.932441711425781,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_42222_1",
+   "label": "E5b",
+   "legs": 5,
+   "species": "(4,2,2,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_42222_1_abs.glb",
+     "meta": "g0_42222_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_42222_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 4.273514747619629,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_33222_0",
+   "label": "F5a",
+   "legs": 5,
+   "species": "(3,3,2,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_33222_0_abs.glb",
+     "meta": "g0_33222_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_33222_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 7.1862711906433105,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_33222_1",
+   "label": "F5b",
+   "legs": 5,
+   "species": "(3,3,2,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_33222_1_abs.glb",
+     "meta": "g0_33222_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_33222_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 2.848012924194336,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_222222_0",
+   "label": "G6a",
+   "legs": 6,
+   "species": "(2,2,2,2,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_222222_0_abs.glb",
+     "meta": "g0_222222_0_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_222222_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 0.45241308212280273,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  },
+  {
+   "id": "g0_222222_1",
+   "label": "G6b",
+   "legs": 6,
+   "species": "(2,2,2,2,2,2)",
+   "spaces": {
+    "abstract": {
+     "glb": "g0_222222_1_abs.glb",
+     "meta": "g0_222222_1_abs.json",
+     "clips": {
+      "flat": {
+       "source": "g0_222222_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 0.1323889046907425,
+       "seconds": 20.0
+      }
+     }
+    }
+   }
+  }
+ ]
+}
