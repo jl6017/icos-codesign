@@ -1,3 +1,22 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ICOS co-design viewer</title>
-<meta http-equiv="refresh" content="0; url=viewer/index.html"></head>
-<body><p>Redirecting to the <a href="viewer/index.html">interactive morphology viewer</a>. Figures and scripts: <a href="https://github.com/jl6017/icos-codesign">github.com/jl6017/icos-codesign</a>.</p></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ICOS co-design</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:system-ui,sans-serif;margin:0;color:#222;background:#fff}
+.viewer{width:100%;height:92vh;border:0;display:block}
+.figs{max-width:1100px;margin:2rem auto;padding:0 1rem}
+.figs h2{font-size:1.25rem;margin:2rem 0 .5rem}
+figure{margin:1.2rem 0}figure img{width:100%;border:1px solid #eee}figcaption{font-size:.9rem;color:#555;margin-top:.4rem}
+.small{font-size:.85rem;color:#666}
+</style></head>
+<body>
+<iframe class="viewer" src="viewer/index.html" title="Interactive morphology viewer"></iframe>
+<section class="figs">
+<h2>Paper figures</h2>
+<p class="small">Locomotion Selects for Symmetry: Evolutionary Co-Design of Legged Robots on an Icosahedral Body — IROS 2026 Workshop on Learning-based Robot Co-design. Scripts in <a href="https://github.com/jl6017/icos-codesign">github.com/jl6017/icos-codesign</a>.</p>
+<figure><img src="figures/symmetry_metric_planes.png" alt="15 reflection planes"><figcaption>Fig. 1 — The icosahedral platform and its symmetry metric: a three-legged candidate against the 15 reflection planes, each labeled with its face-placement score F and motor-level score J (P7: F=0, J=0 is the symmetric plane).</figcaption></figure>
+<figure><img src="figures/bodies_merged_3x4.png" alt="bodies"><figcaption>Fig. 2 — Top: candidates evolving in the abstract simulator. Middle: champions evolved in the realistic simulator (tripod, (3,3,3,3), (4,4,2,2), (3,3,2,2,2)) at their solved stance. Bottom: the tripod and (3,3,3,3) champions walking on 30 mm terrain with policies trained on it.</figcaption></figure>
+<figure><img src="figures/drift_merged_6x2.png" alt="symmetry drift"><figcaption>Fig. 3 — Symmetry of the elites per generation (F left, J right; lower = more symmetric). Red: abstract mixed competition; green: abstract speciated evolution; blue: realistic simulator. Regression with 95% CI; dashed: species-matched drift baseline.</figcaption></figure>
+<figure><img src="figures/v6_ea_fitness.png" alt="EA fitness"><figcaption>Fig. S2 — Mixed competition: displacement of every trained candidate per generation, by leg count, with best and mean elite.</figcaption></figure>
+<figure><img src="figures/v6_ea_partitions.png" alt="partition share"><figcaption>Fig. S3 — Mixed competition: share of the elite slots per topology and per leg count; tripods hold every slot from generation 31.</figcaption></figure>
+</section>
+</body></html>
