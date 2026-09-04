@@ -315,28 +315,6 @@
   </div>
 </footer>
 
-<script>
-// results table sorting
-document.querySelectorAll('#results-table th').forEach((th, i) => th.addEventListener('click', () => {
-  const tb = th.closest('table').tBodies[0];
-  const dir = th.getAttribute('aria-sort') === 'descending' ? 'ascending' : 'descending';
-  th.parentNode.querySelectorAll('th').forEach((x) => x.removeAttribute('aria-sort'));
-  th.setAttribute('aria-sort', dir);
-  const num = (s) => parseFloat(s.replace(/[^0-9.\-]/g, ''));
-  [...tb.rows].sort((a, b) => {
-    const x = a.cells[i].textContent, y = b.cells[i].textContent;
-    const nx = num(x), ny = num(y);
-    const c = (isNaN(nx) || isNaN(ny)) ? x.localeCompare(y) : nx - ny;
-    return dir === 'descending' ? -c : c;
-  }).forEach((r) => tb.appendChild(r));
-}));
-// bibtex copy
-document.getElementById('copy-bib').addEventListener('click', async (e) => {
-  try { await navigator.clipboard.writeText(document.getElementById('bib').textContent); e.target.textContent = 'Copied'; }
-  catch { e.target.textContent = 'Select & copy'; }
-  setTimeout(() => { e.target.textContent = 'Copy'; }, 1600);
-});
-</script>
 <script type="module" src="viewer.js?v=2eec492db2"></script>
 </body>
 </html>
