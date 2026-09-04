@@ -20,8 +20,63 @@
     <p class="authors"><a href="#">Jiong Lin<sup>1</sup></a> · <a href="#">Yue Yao<sup>1</sup></a> · <a href="#">Hod Lipson<sup>1</sup></a></p>
     <p class="affil"><sup>1</sup> Creative Machines Lab, Columbia University</p>
     <div class="actions">
-      <a class="btn" href="https://github.com/jl6017/icos-codesign">Code &amp; figures (GitHub)</a>
+      <a class="btn" href="paper.pdf?v=2eec492db2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5z"/></svg>Paper</a>
+      <a class="btn" href="https://github.com/jl6017/icos-codesign"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Code</a>
+      </div>
+
+    <div class="viewer-shell" id="viewer">
+      <div id="viewport">
+        <div class="hud"><div class="name" id="hud-name">—</div><div class="tag" id="hud-tag">loading…</div></div>
+        <div class="readout">
+          <span>time</span><b id="ro-time">0.00 s</b>
+          <span>distance</span><b id="ro-disp">0.00 m</b>
+          <span>paper mean</span><b id="ro-paper">—</b>
+        </div>
+        <div class="hint">drag to orbit · scroll to zoom · right-drag to pan</div>
+        <div class="loading" id="loading">loading model…</div>
+      </div>
+      <div class="controls">
+        <div class="group">
+          <label class="small" for="morph">Morphology</label>
+          <div class="transport">
+            <button type="button" class="icon" id="prev" aria-label="Previous morphology">‹</button>
+            <select class="morph" id="morph" aria-label="Morphology"></select>
+            <button type="button" class="icon" id="next" aria-label="Next morphology">›</button>
+          </div>
+        </div>
+        <div class="group">
+          <span class="small">Design space</span>
+          <div class="seg" role="group" aria-label="Design space">
+            <button type="button" class="space-abs" data-space="abstract" aria-pressed="true">Abstract</button>
+            <button type="button" class="space-fab" data-space="fabricable" aria-pressed="false" disabled title="Pending — the current hardware build is still being trained">Fabricable</button>
+          </div>
+        </div>
+        <div class="group">
+          <span class="small">Environment</span>
+          <div class="seg" role="group" aria-label="Environment" style="width: max-content" title="The abstract line was trained on flat ground only">
+            <button type="button" data-env="flat" aria-pressed="true">Flat</button>
+          </div>
+        </div>
+        <div class="wide">
+          <div class="transport">
+            <button type="button" id="play" aria-pressed="true" aria-label="Play / pause">Pause</button>
+            <div class="seg" role="group" aria-label="Playback speed">
+              <button type="button" data-speed="0.25" aria-pressed="false">¼×</button>
+              <button type="button" data-speed="0.5" aria-pressed="false">½×</button>
+              <button type="button" data-speed="1" aria-pressed="true">1×</button>
+              <button type="button" data-speed="2" aria-pressed="false">2×</button>
+            </div>
+          </div>
+          <input type="range" id="scrub" min="0" max="1" step="0.001" value="0" aria-label="Scrub time">
+          <div class="transport">
+            <button type="button" id="follow" aria-pressed="true">Follow</button>
+            <button type="button" id="reset">Reset view</button>
+          </div>
+        </div>
+        <div class="note" id="viewer-note" style="grid-column: 1 / -1"></div>
+      </div>
     </div>
+    <p class="viewer-caption">Training-time trajectories of all 18 morphologies in the abstract simulator, replayed through MuJoCo forward kinematics · 20 s clips · bodies drawn as the proxies that simulator computes with (capsule links, lumped joint masses) · fabricable-space clips will follow once the current hardware build is trained</p>
   </div>
 </header>
 
