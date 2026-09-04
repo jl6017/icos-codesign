@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Co-Design Rankings Do Not Survive Realization</title>
+<title>ICOS co-design — interactive morphology viewer</title>
 <meta name="description" content="18 morphologies of a modular icosahedral robot, trained in an abstract and a fabricable simulator: the rankings are uncorrelated. Interactive 3D trajectories, figures and data.">
-<meta property="og:title" content="Co-Design Rankings Do Not Survive Realization">
-<meta property="og:description" content="An 18-morphology, 4-environment study on a modular icosahedral legged robot">
+<meta property="og:title" content="ICOS co-design: interactive morphology viewer">
+<meta property="og:description" content="Abstract and fabricable morphologies of the icosahedral legged robot, with training-time trajectories replayed in the browser">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="site.css">
@@ -16,15 +16,15 @@
 
 <header class="top">
   <div class="wrap">
-    <div class="eyebrow">IROS 2026 · Workshop on Learning-based Robot Co-design</div>
+    <div class="eyebrow">Visualization page for the IROS 2026 co-design workshop abstract</div>
     <h1>Co-Design Rankings<br>Do Not Survive Realization</h1>
-    <p class="subtitle">An 18-morphology, 4-environment study on a modular icosahedral legged robot</p>
+    <p class="subtitle">Abstract and fabricable morphologies of the icosahedral legged robot, with training-time trajectories replayed in the browser</p>
     <p class="authors"><a href="#">Author One<sup>1</sup></a> · <a href="#">Author Two<sup>1</sup></a> · <a href="#">Author Three<sup>1</sup></a></p>
-    <p class="affil"><sup>1</sup>Creative Machines Lab, Columbia University</p>
+    
     <div class="actions">
-      <a class="btn" href="paper.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.5H8V13zm0 3.5h8V18H8v-1.5z"/></svg>Paper</a>
+      
       <a class="btn" href="https://github.com/jl6017/mujoco_playground/tree/IROS_workshop/icos/hardware_line"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>Code</a>
-      <a class="btn" href="#bibtex"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6A4.5 4.5 0 0 0 2 10.5V18h7v-7H5.5a2 2 0 0 1 2-2H8V6H6.5zm10 0A4.5 4.5 0 0 0 12 10.5V18h7v-7h-3.5a2 2 0 0 1 2-2H18V6h-1.5z"/></svg>BibTeX</a>
+      
     </div>
 
     <div class="viewer-shell" id="viewer">
@@ -85,49 +85,6 @@
     <p class="viewer-caption">Training-time trajectories of all 18 morphologies replayed through MuJoCo forward kinematics · 20 s clips · 4 environments · fabricable bodies drawn with the current leg design (v50: 4 printed parts + 3 × XM430 per leg, same joint layout as the trained model), abstract bodies as the proxies that simulator computes with (capsule links, lumped joint masses)</p>
   </div>
 </header>
-
-<section id="tldr">
-  <div class="wrap narrow">
-    <p class="tldr">The same 18 robot bodies, trained once in the idealised simulator a co-design search uses and once as printable machines: <b class="brick-t">the two rankings are unrelated</b> (ρ<sub>s</sub> = 0.11) — while changing terrain or friction <b class="steel-t">leaves them intact</b> (ρ<sub>s</sub> = 0.7–0.9). Fidelity belongs inside the co-design loop, not after it.</p>
-    <details class="abstract">
-      <summary>Abstract</summary>
-      <div>
-      <p>Learning-based co-design methods score candidate robot bodies in a simplified simulator and return a ranked list. We ask how much of that ranking survives when the designs are made buildable. We take 18 morphologies of a modular icosahedral legged robot, sampled from our own evolutionary co-design space, and train each with the same PPO recipe in a replica of the abstract simulator used by the search and in a fabricable simulator calibrated against CAD models and motor datasheets. The two rankings are uncorrelated (ρ<sub>s</sub> = +0.11, p = 0.66; mean rank change 5.9 of 18): the best abstract design drops to 7th, and a design that barely moved in the abstract simulator (0.54 m, 17th) becomes 2nd at 10.8 m. The reshuffle is robust to the training seed (P &lt; 0.02 under resampling), to reward re-weighting and added mass (ρ<sub>s</sub> ≥ 0.77) and to halving the training budget (ρ<sub>s</sub> ≥ 0.90), and it is caused mainly by the changes in geometry, DoF allocation, rest pose and mass rather than by the actuator model (ρ<sub>s</sub> = −0.30 vs. +0.61). Changing the terrain at fixed realization, in contrast, largely preserves the ranking (rubble ρ<sub>s</sub> = 0.90, ice 0.72); only stepping stones reshuffle it as much. We trace the reshuffle to a shell-sliding exploit, to rest poses that penetrate or float above the ground, and to a leg-count advantage that exists only in the abstract simulator. Simulator fidelity should therefore be part of the co-design loop rather than a step after it.</p>
-      </div>
-    </details>
-  </div>
-  <div class="wrap">
-    <div class="numbers">
-      <div><div class="v brick">0.11</div><div class="k">ρ<sub>s</sub> abstract ↔ fabricable ranking (p = 0.66)</div></div>
-      <div><div class="v">5.9 / 18</div><div class="k">mean rank shift at realization</div></div>
-      <div><div class="v steel">0.90 · 0.72</div><div class="k">ρ<sub>s</sub> rubble · ice — the environment keeps the ranking</div></div>
-      <div><div class="v">P &lt; 0.02</div><div class="k">reshuffle vs. seed noise (6 × 3 replication)</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="figures">
-  <div class="wrap">
-    <h2>Realization reshuffles the ranking; the task environment does not</h2>
-    <p class="sub">Rank of each of the 18 bodies after training in the abstract simulator vs. as a fabricable robot — then across terrains.</p>
-    <div class="figs">
-      <figure class="card-fig" style="max-width:660px;margin:0 auto">
-        <img src="figs/fig_slope.png" alt="Slope graph: rank of 18 morphologies in the abstract space versus the fabricable space; lines cross heavily" width="1005" height="480">
-        <figcaption>Abstract flat-ground rank → fabricable rank. <span class="key">Q/T/M/H hand-designed · A–G species (4,4,4)…(2,2,2,2,2,2), samples a/b · digit = legs</span></figcaption>
-      </figure>
-      <div class="figs two">
-        <figure class="card-fig">
-          <img src="figs/fig_rho_a.png" alt="Bar chart of Spearman rank correlations with the fabricable flat ranking: design space 0.11, stepping stones 0.12, ice 0.72, rubble 0.90" width="1237" height="345">
-          <figcaption>Realization sits far outside the seed-noise band (0.89–0.98 from a clean-recipe 6 × 3 seed replication); rubble sits inside it, ice just below — only discrete footholds reshuffle like realization.</figcaption>
-        </figure>
-        <figure class="card-fig">
-          <img src="figs/fig_rho_b.png" alt="Bar chart of median performance retention per leg count on rubble, ice and stepping stones" width="865" height="345">
-          <figcaption>The leg-count advantage is environment-conditional.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="morphologies">
   <div class="wrap">
@@ -386,147 +343,6 @@
     </button>
   </div>
 </div>
-    </div>
-  </div>
-</section>
-
-<section id="realization">
-  <div class="wrap narrow">
-    <h2>What changes at realization</h2>
-    <p class="sub">Same reward, same PPO budget, same 18 bodies — only the simulator changes.</p>
-    <dl class="speclist">
-      <div><dt>Leg module</dt><dd><span class="from">free 12-DoF partition, 2–5 DoF per leg</span><span class="arrow">→</span><span class="to">one printable 3-DoF module, DoF = 3 × legs</span></dd></div>
-      <div><dt>Collision</dt><dd><span class="from">sphere proxies, smooth shell</span><span class="arrow">→</span><span class="to">convex-hull body, motor cylinders, skirt rings</span></dd></div>
-      <div><dt>Rest pose</dt><dd><span class="from">straight legs, unreachable</span><span class="arrow">→</span><span class="to">solved equilibrium (Δz &lt; 25 mm, no penetration)</span></dd></div>
-      <div><dt>Actuation</dt><dd><span class="from">ideal position servo</span><span class="arrow">→</span><span class="to">torque PD, 4.1 N·m / 4.8 rad s⁻¹ envelope, 0–20 ms latency, sensor noise</span></dd></div>
-      <div><dt>Mass</dt><dd><span class="from">lumped at joints, 2.2 kg for all</span><span class="arrow">→</span><span class="to">CAD masses at centroids, 1.8–3.1 kg, 9–18 servos</span></dd></div>
-    </dl>
-    <p class="finding">Reverting only the actuator to the ideal servo leaves the ranking unrelated to the abstract one (ρ<sub>s</sub> = −0.30) but close to the calibrated one (ρ<sub>s</sub> = +0.61): <b>geometry, DoF, rest pose and mass do the damage — not the actuator.</b></p>
-  </div>
-</section>
-
-<section id="results">
-  <div class="wrap">
-    <details class="table">
-      <summary>Full results table — 18 morphologies × 8 conditions</summary>
-      <div class="tablewrap">
-        <table id="results-table">
-          <thead><tr>
-            <th>Morph</th><th>Species</th><th>Legs</th>
-            <th>Abstract m</th><th>rank</th><th title="fabricable body, abstract ideal servos">Ideal-servo m</th><th>Fabricable m</th><th>rank</th>
-            <th>Rubble m</th><th>Ice m</th><th>Stones m</th><th>F</th><th>J</th>
-          </tr></thead>
-          <tbody>
-<tr><td>Q4</td><td>(3,3,3,3) hand-designed</td><td>4</td>
-<td class="a">7.75</td><td>9</td>
-<td>13.50</td>
-<td class="f">11.72</td><td>1</td>
-<td>9.70</td><td>8.50</td><td>0.39</td><td>2</td><td>6</td></tr>
-<tr><td>G6a</td><td>(2,2,2,2,2,2)</td><td>6</td>
-<td class="a">0.54</td><td>17</td>
-<td>12.25</td>
-<td class="f">10.84</td><td>2</td>
-<td>9.62</td><td>8.95</td><td>0.54</td><td>2</td><td>4</td></tr>
-<tr><td>H6</td><td>(2,2,2,2,2,2) hand-designed</td><td>6</td>
-<td class="a">3.39</td><td>14</td>
-<td>11.88</td>
-<td class="f">10.09</td><td>3</td>
-<td>9.25</td><td>8.89</td><td>1.93</td><td>2</td><td>4</td></tr>
-<tr><td>E5b</td><td>(4,2,2,2,2)</td><td>5</td>
-<td class="a">4.11</td><td>13</td>
-<td>10.43</td>
-<td class="f">9.45</td><td>4</td>
-<td>8.52</td><td>7.15</td><td>1.12</td><td>1</td><td>2</td></tr>
-<tr><td>B4a</td><td>(3,3,3,3)</td><td>4</td>
-<td class="a">8.93</td><td>5</td>
-<td>2.29</td>
-<td class="f">5.79</td><td>5</td>
-<td>5.25</td><td>3.93</td><td>0.36</td><td>1</td><td>3</td></tr>
-<tr><td>F5a</td><td>(3,3,2,2,2)</td><td>5</td>
-<td class="a">7.27</td><td>11</td>
-<td>6.94</td>
-<td class="f">5.64</td><td>6</td>
-<td>6.94</td><td>7.49</td><td>4.02</td><td>0</td><td>5</td></tr>
-<tr><td>A3a</td><td>(4,4,4)</td><td>3</td>
-<td class="a">17.53</td><td>1</td>
-<td>3.68</td>
-<td class="f">5.53</td><td>7</td>
-<td>4.52</td><td>1.42</td><td>0.63</td><td>2</td><td>8</td></tr>
-<tr><td>T3</td><td>(4,4,4) hand-designed</td><td>3</td>
-<td class="a">11.12</td><td>3</td>
-<td>5.85</td>
-<td class="f">5.46</td><td>8</td>
-<td>4.06</td><td>3.57</td><td>0.48</td><td>0</td><td>0</td></tr>
-<tr><td>D4b</td><td>(4,4,2,2)</td><td>4</td>
-<td class="a">9.80</td><td>4</td>
-<td>3.49</td>
-<td class="f">5.30</td><td>9</td>
-<td>5.17</td><td>6.49</td><td>0.45</td><td>1</td><td>8</td></tr>
-<tr><td>A3b</td><td>(4,4,4)</td><td>3</td>
-<td class="a">12.39</td><td>2</td>
-<td>6.42</td>
-<td class="f">5.24</td><td>10</td>
-<td>4.99</td><td>1.73</td><td>0.55</td><td>1</td><td>4</td></tr>
-<tr><td>C4b</td><td>(4,3,3,2)</td><td>4</td>
-<td class="a">7.51</td><td>10</td>
-<td>8.16</td>
-<td class="f">4.80</td><td>11</td>
-<td>5.19</td><td>6.16</td><td>0.58</td><td>1</td><td>4</td></tr>
-<tr><td>E5a</td><td>(4,2,2,2,2)</td><td>5</td>
-<td class="a">7.84</td><td>8</td>
-<td>9.87</td>
-<td class="f">4.44</td><td>12</td>
-<td>3.58</td><td>4.72</td><td>2.55</td><td>2</td><td>6</td></tr>
-<tr><td>G6b</td><td>(2,2,2,2,2,2)</td><td>6</td>
-<td class="a">0.13</td><td>18</td>
-<td>7.07</td>
-<td class="f">4.39</td><td>13</td>
-<td>5.39</td><td>6.44</td><td>0.18</td><td>3</td><td>6</td></tr>
-<tr><td>B4b</td><td>(3,3,3,3)</td><td>4</td>
-<td class="a">8.82</td><td>6</td>
-<td>6.79</td>
-<td class="f">3.31</td><td>14</td>
-<td>3.75</td><td>5.67</td><td>0.33</td><td>1</td><td>3</td></tr>
-<tr><td>C4a</td><td>(4,3,3,2)</td><td>4</td>
-<td class="a">8.45</td><td>7</td>
-<td>3.05</td>
-<td class="f">2.72</td><td>15</td>
-<td>2.96</td><td>1.12</td><td>0.39</td><td>2</td><td>6</td></tr>
-<tr><td>D4a</td><td>(4,4,2,2)</td><td>4</td>
-<td class="a">5.90</td><td>12</td>
-<td>4.18</td>
-<td class="f">2.26</td><td>16</td>
-<td>2.71</td><td>1.83</td><td>0.41</td><td>2</td><td>6</td></tr>
-<tr><td>M5</td><td>(3,3,2,2,2) hand-designed</td><td>5</td>
-<td class="a">3.26</td><td>15</td>
-<td>3.09</td>
-<td class="f">2.13</td><td>17</td>
-<td>2.22</td><td>1.39</td><td>0.57</td><td>2</td><td>6</td></tr>
-<tr><td>F5b</td><td>(3,3,2,2,2)</td><td>5</td>
-<td class="a">2.80</td><td>16</td>
-<td>0.46</td>
-<td class="f">1.47</td><td>18</td>
-<td>1.18</td><td>1.65</td><td>0.77</td><td>1</td><td>5</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="tablenote">Mean 20 s displacement over 4096 rollouts · Ideal-servo = fabricable body with the abstract servo model · F / J = placement / axis mirror-asymmetry (0 = symmetric) · click a header to sort</p>
-    </details>
-  </div>
-</section>
-
-<section id="bibtex">
-  <div class="wrap narrow">
-    <h2>BibTeX</h2>
-    <div class="bibwrap">
-      <button type="button" class="copy" id="copy-bib">Copy</button>
-      <pre class="bib mono" id="bib">@inproceedings{icos2026realization,
-  title     = {Co-Design Rankings Do Not Survive Realization: An 18-Morphology, 4-Environment Study},
-  author    = {Author One and Author Two and Author Three},
-  booktitle = {IROS 2026 Workshop on Learning-based Robot Co-design: Generative and Iterative Approaches},
-  year      = {2026},
-  note      = {Non-archival extended abstract}
-}</pre>
     </div>
   </div>
 </section>
