@@ -76,14 +76,14 @@
         <div class="note" id="viewer-note" style="grid-column: 1 / -1"></div>
       </div>
     </div>
-    <p class="viewer-caption">Training-time trajectories of all 18 morphologies in the abstract simulator, replayed through MuJoCo forward kinematics · 20 s clips · bodies drawn as the proxies that simulator computes with (capsule links, lumped joint masses) · fabricable-space clips will follow once the current hardware build is trained</p>
+    <p class="viewer-caption">One recorded 20 s rollout per policy, replayed through MuJoCo forward kinematics · every clip trained with the same PPO recipe (icos_v2, 50 M steps with early stop) · <b>abstract</b> = the capsule proxies the co-design simulator computes with · <b>fabricable</b> = the hw17 build (v50 printed parts, XM430 motor model, domain randomisation) · flat ground and a quantised 30 mm rough field</p>
   </div>
 </header>
 
 <section id="morphologies">
   <div class="wrap">
     <h2>The 18 morphologies</h2>
-    <p class="sub">Each body as the abstract simulator sees it. Numbers are the <b>mean 20&nbsp;s displacement over 4,096 evaluation rollouts</b> (<span style="color:#c8102e">abstract</span> &rarr; <span style="color:#2b6cb0">fabricable</span>, rank of 18); the clip replayed in the viewer is a <em>single</em> recorded rollout whose own distance is shown live in the corner and can differ from the mean by a few percent (up to 27&nbsp;% for E5a). Ordered by abstract rank &middot; click a card to load it.</p>
+    <p class="sub">Each body in both spaces · numbers are the 20 s displacement of the recorded clip on flat ground (rank of 18) and on the rough field, <span class="brick-t">abstract</span> → <span class="steel-t">fabricable</span> · ordered by abstract flat displacement · click a half to load it in the viewer</p>
     <div class="gallery" id="gallery">
 <div class="card" data-morph="g0_4332_0">
   <div class="lbl"><b>C4a</b><span class="sp">(4,3,3,2) · 4 legs</span><span class="chip down" title="rank 1 abstract → 4 fabricable, flat ground">↓3</span></div>
