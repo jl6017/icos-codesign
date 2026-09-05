@@ -61,6 +61,11 @@
        "source": "tripod_hw17_flat_traj.npz",
        "displacement_final_m": 6.040429592132568,
        "seconds": 20.01999955251813
+      },
+      "rough30": {
+       "source": "tripod_hw17_rough30_traj.npz",
+       "displacement_final_m": 0.2718442678451538,
+       "seconds": 20.01999955251813
       }
      }
     }
@@ -125,6 +130,11 @@
       "flat": {
        "source": "hexapod_hw17_flat_traj.npz",
        "displacement_final_m": 2.5746521949768066,
+       "seconds": 20.01999955251813
+      },
+      "rough30": {
+       "source": "hexapod_hw17_rough30_traj.npz",
+       "displacement_final_m": 0.26185768842697144,
        "seconds": 20.01999955251813
       }
      }
@@ -261,6 +271,11 @@
        "source": "g0_3333_1_hw17_flat_traj.npz",
        "displacement_final_m": 7.568758487701416,
        "seconds": 20.01999955251813
+      },
+      "rough30": {
+       "source": "g0_3333_1_hw17_rough30_traj.npz",
+       "displacement_final_m": 0.22688420116901398,
+       "seconds": 20.01999955251813
       }
      }
     }
@@ -322,6 +337,11 @@
      "glb": "g0_4332_1_fab.glb",
      "meta": "g0_4332_1_fab.json",
      "clips": {
+      "flat": {
+       "source": "g0_4332_1_hw17_flat_traj.npz",
+       "displacement_final_m": 0.18212386965751648,
+       "seconds": 20.01999955251813
+      },
       "rough30": {
        "source": "g0_4332_1_hw17_rough30_traj.npz",
        "displacement_final_m": 3.321791887283325,
@@ -387,6 +407,11 @@
      "glb": "g0_4422_1_fab.glb",
      "meta": "g0_4422_1_fab.json",
      "clips": {
+      "flat": {
+       "source": "g0_4422_1_hw17_flat_traj.npz",
+       "displacement_final_m": 0.2724979817867279,
+       "seconds": 20.01999955251813
+      },
       "rough30": {
        "source": "g0_4422_1_hw17_rough30_traj.npz",
        "displacement_final_m": 1.3509132862091064,
@@ -526,6 +551,11 @@
        "source": "g0_33222_1_hw17_flat_traj.npz",
        "displacement_final_m": 0.6947578191757202,
        "seconds": 20.01999955251813
+      },
+      "rough30": {
+       "source": "g0_33222_1_hw17_rough30_traj.npz",
+       "displacement_final_m": 0.8103991746902466,
+       "seconds": 20.01999955251813
       }
      }
     }
@@ -599,6 +629,86 @@
       }
      }
     }
+   }
+  },
+  {
+   "id": "g2_444_off0",
+   "label": "Champion 444 (EA, converged)",
+   "legs": 3,
+   "species": "(4,4,4) EA champion",
+   "spaces": {
+    "fabricable": {
+     "glb": "g2_444_off0_fab.glb",
+     "meta": "g2_444_off0_fab.json",
+     "clips": {
+      "flat": {
+       "source": "champ_g2_444_off0_hw17_flat_s1_traj.npz",
+       "displacement_final_m": 9.674391746520996,
+       "seconds": 20.01999955251813
+      }
+     }
+    }
+   },
+   "champion": {
+    "seeds": {
+     "champ_g2_444_off0_hw17_flat_s1_traj.npz": 9.674,
+     "champ_g2_444_off0_hw17_flat_s3_traj.npz": 9.322,
+     "champ_g2_444_off0_hw17_flat_s2_traj.npz": 9.446
+    },
+    "best": "champ_g2_444_off0_hw17_flat_s1_traj.npz"
+   }
+  },
+  {
+   "id": "g2_3333_off6",
+   "label": "Champion 3333 (EA, converged)",
+   "legs": 4,
+   "species": "(3,3,3,3) EA champion",
+   "spaces": {
+    "fabricable": {
+     "glb": "g2_3333_off6_fab.glb",
+     "meta": "g2_3333_off6_fab.json",
+     "clips": {
+      "flat": {
+       "source": "champ_g2_3333_off6_hw17_flat_s2_traj.npz",
+       "displacement_final_m": 7.9093146324157715,
+       "seconds": 20.01999955251813
+      }
+     }
+    }
+   },
+   "champion": {
+    "seeds": {
+     "champ_g2_3333_off6_hw17_flat_s1_traj.npz": 1.656,
+     "champ_g2_3333_off6_hw17_flat_s3_traj.npz": 7.409,
+     "champ_g2_3333_off6_hw17_flat_s2_traj.npz": 7.909
+    },
+    "best": "champ_g2_3333_off6_hw17_flat_s2_traj.npz"
+   }
+  },
+  {
+   "id": "champ3333t",
+   "label": "Champion 3333 terrain (EA, converged)",
+   "legs": 4,
+   "species": "(3,3,3,3) terrain-EA champion",
+   "spaces": {
+    "fabricable": {
+     "glb": "champ3333t_fab.glb",
+     "meta": "champ3333t_fab.json",
+     "clips": {
+      "rough30": {
+       "source": "champ_champ3333t_hw17_rough30_s1_traj.npz",
+       "displacement_final_m": 6.1656293869018555,
+       "seconds": 20.01999955251813
+      }
+     }
+    }
+   },
+   "champion": {
+    "seeds": {
+     "champ_champ3333t_hw17_rough30_s1_traj.npz": 6.166,
+     "champ_champ3333t_hw17_rough30_s3_traj.npz": 1.503
+    },
+    "best": "champ_champ3333t_hw17_rough30_s1_traj.npz"
    }
   }
  ],
