@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const ENVS = ['flat', 'rubble', 'ice', 'stones'];
-const ENV_LABEL = { flat: 'Flat ground', rubble: 'Rubble · 30 mm', ice: 'Ice · μ 0.05–0.2', stones: 'Stepping stones' };
+const ENV_LABEL = { flat: 'Flat ground', rough30: 'Rough · 30 mm', rubble: 'Rubble · 30 mm', ice: 'Ice · μ 0.05–0.2', stones: 'Stepping stones' };
 const $ = (s) => document.querySelector(s);
 const EMBED = window.__EMBED || null;
 // index.html loads us as viewer.js?v=<stamp>; pass the same stamp to everything we fetch, so a
@@ -66,6 +66,7 @@ let terrainGroup = null;
 const GROUND_MAT = {
   flat: () => new THREE.MeshStandardMaterial({ color: 0x3b434d, roughness: 0.95, metalness: 0.0 }),
   ice: () => new THREE.MeshStandardMaterial({ color: 0x4f7ea8, roughness: 0.3, metalness: 0.05 }),
+  rough30: () => new THREE.MeshStandardMaterial({ color: 0x7d7468, roughness: 1.0, metalness: 0.0, flatShading: true, side: THREE.DoubleSide }),
   rubble: () => new THREE.MeshStandardMaterial({ color: 0x7d7468, roughness: 1.0, metalness: 0.0, flatShading: true, side: THREE.DoubleSide }),
   stones: () => new THREE.MeshStandardMaterial({ color: 0x8a8d94, roughness: 0.95, metalness: 0.0, flatShading: true, side: THREE.DoubleSide }),
 };
@@ -285,7 +286,7 @@ function updateUI(entry, available, ok) {
   });
   const finalD = meta.clips[state.env] ? meta.clips[state.env].displacement_final_m.toFixed(2) + ' m' : '—';
   const roFinal = $('#ro-final'); if (roFinal) roFinal.textContent = finalD;
-  $('#ro-paper').textContent = row ? `${row[state.space === 'fabricable' ? (state.env === 'flat' ? 'flat' : state.env) : 'abstract'].toFixed(2)} m` : '—';
+  { const _k = state.space === 'fabricable' ? state.env : 'abstract'; const _v = row && typeof row[_k] === 'number' ? row[_k] : null; $('#ro-paper').textContent = _v !== null ? `${_v.toFixed(2)} m` : '—'; }
   $('#viewer-note').textContent = ok ? '' : 'No trajectory recorded for this environment yet; showing the rest pose.';
   if (state.env === 'stones') $('#viewer-note').textContent += ' Stepping-stone layout is illustrative (same stone size and gaps; the training run’s random offsets are not recoverable).';
 }
