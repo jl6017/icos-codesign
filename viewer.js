@@ -135,7 +135,8 @@ async function setTerrain(kind, pathXY) {
     terrainGroup.add(stepMesh(t, { xmin: xmin - m, xmax: xmax + m, ymin: ymin - m, ymax: ymax + m }, GROUND_MAT[kind]()));
     // the fallback plane below the field (z = -0.5 for stones, hidden under rubble)
     const base = new THREE.Mesh(new THREE.PlaneGeometry(80, 80), new THREE.MeshStandardMaterial({ color: 0x1d2229, roughness: 1 }));
-    base.rotation.x = -Math.PI / 2; base.position.y = kind === 'stones' ? -0.5 : 0.0; base.receiveShadow = true;
+    // 1 cm below the field so it never coincides with the 0 mm plateaus (z-fighting flashed as holes); stones keep their -0.5 m pit floor
+    base.rotation.x = -Math.PI / 2; base.position.y = kind === 'stones' ? -0.5 : -0.01; base.receiveShadow = true;
     terrainGroup.add(base);
   } else {
     terrainGroup.add(flatGround(kind));
