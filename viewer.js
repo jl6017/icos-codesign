@@ -204,6 +204,13 @@ function selectClip(env) {
 }
 
 async function show(morph, space, env, keepCamera = false) {
+  const entry0 = index.morphologies.find((m) => m.id === morph);
+  if (entry0 && !entry0.spaces[space]) space = Object.keys(entry0.spaces)[0];   // e.g. champions exist only in the fabricable space
+  document.querySelectorAll('.controls [data-space]').forEach((x) => {
+    x.disabled = !(entry0 && entry0.spaces[x.dataset.space]);
+    x.setAttribute('aria-pressed', x.dataset.space === space);
+    x.title = x.disabled ? 'No clip in this space for this entry' : '';
+  });
   state.morph = morph; state.space = space;
   const entry = await loadRobot(morph, space);
   const available = Object.keys(entry.spaces[space].clips);
