@@ -9,7 +9,7 @@
 <meta property="og:description" content="An 18-morphology, 4-environment study on a modular icosahedral legged robot">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css?v=e4d077d03d">
+<link rel="stylesheet" href="site.css?v=4b641bba75">
 <script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script>
 </head>
 <body>
@@ -76,319 +76,283 @@
         <div class="note" id="viewer-note" style="grid-column: 1 / -1"></div>
       </div>
     </div>
-    <p class="viewer-caption">One recorded 20 s rollout per policy, replayed through MuJoCo forward kinematics · every clip trained with the same PPO recipe (icos_v2, 50 M steps with early stop) · <b>abstract</b> = the capsule proxies the co-design simulator computes with · <b>fabricable</b> = the hw17 build (v50 printed parts, XM430 motor model, domain randomisation) · flat ground and a quantised 30 mm rough field</p>
+    <p class="viewer-caption">One recorded 20&nbsp;s rollout per clip, replayed through MuJoCo forward kinematics · <b>abstract</b> space = the original study’s clips (Genesis, position-controlled servos, capsule bodies) · <b>fabricable</b> space = the hw17 build (v50 printed parts, XM430 motor model, domain randomisation) trained in icos_v2, on flat ground and on the quantised 30&nbsp;mm rough field</b> = the capsule proxies the co-design simulator computes with · <b>fabricable</b> = the hw17 build (v50 printed parts, XM430 motor model, domain randomisation) · flat ground and a quantised 30 mm rough field</p>
   </div>
 </header>
 
 <section id="morphologies">
   <div class="wrap">
     <h2>The 18 morphologies</h2>
-    <p class="sub">Each body in both spaces · numbers are the 20 s displacement of the recorded clip on flat ground (rank of 18) and on the rough field, <span class="brick-t">abstract</span> → <span class="steel-t">fabricable</span> · ordered by abstract flat displacement · click a half to load it in the viewer</p>
+    <p class="sub">Each body in both design spaces. Left: the abstract-space clip from the original study (Genesis, position-controlled servos). Right: the same morphology as the hw17 build trained in this work, on flat ground and on the 30&nbsp;mm rough field. Numbers are the 20&nbsp;s displacement of the recorded clip. Click a thumbnail to load it in the viewer.</p>
     <div class="gallery" id="gallery">
-<div class="card" data-morph="g0_4332_0">
-  <div class="lbl"><b>C4a</b><span class="sp">(4,3,3,2) · 4 legs</span><span class="chip down" title="rank 1 abstract → 4 fabricable, flat ground">↓3</span></div>
+<div class="card" data-morph="g0_444_0">
+  <div class="lbl"><b>A3a</b><span class="sp">(4,4,4) · 3 legs</span></div>
   <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_4332_0" data-space="abstract" title="C4a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4332_0_abs.webp?v=e4d077d03d" alt="C4a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half abs" type="button" data-morph="g0_444_0" data-space="abstract" title="A3a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_444_0_abs.webp?v=4b641bba75" alt="A3a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_4332_0" data-space="fabricable" title="C4a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4332_0_fab.webp?v=e4d077d03d" alt="C4a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half fab" type="button" data-morph="g0_444_0" data-space="fabricable" title="A3a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_444_0_fab.webp?v=4b641bba75" alt="A3a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
   </div>
   <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>6.7 m</b><span>rank 1 · rough 10.3 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>4.5 m</b><span>rank 4 · rough 4.2 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_3333_0">
-  <div class="lbl"><b>B4a</b><span class="sp">(3,3,3,3) · 4 legs</span><span class="chip down" title="rank 2 abstract → 11 fabricable, flat ground">↓9</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_3333_0" data-space="abstract" title="B4a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_3333_0_abs.webp?v=e4d077d03d" alt="B4a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_3333_0" data-space="fabricable" title="B4a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_3333_0_fab.webp?v=e4d077d03d" alt="B4a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>6.3 m</b><span>rank 2 · rough 5.2 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>1.2 m</b><span>rank 11 · rough 1.8 m</span></span>
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>17.4 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>4.9 m</b><span>hw17 · flat · rough 2.3 m</span></span>
   </div>
 </div>
 <div class="card" data-morph="g0_444_1">
-  <div class="lbl"><b>A3b</b><span class="sp">(4,4,4) · 3 legs</span><span class="chip up" title="rank 3 abstract → 2 fabricable, flat ground">↑1</span></div>
+  <div class="lbl"><b>A3b</b><span class="sp">(4,4,4) · 3 legs</span></div>
   <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_444_1" data-space="abstract" title="A3b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_444_1_abs.webp?v=e4d077d03d" alt="A3b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half abs" type="button" data-morph="g0_444_1" data-space="abstract" title="A3b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_444_1_abs.webp?v=4b641bba75" alt="A3b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_444_1" data-space="fabricable" title="A3b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_444_1_fab.webp?v=e4d077d03d" alt="A3b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half fab" type="button" data-morph="g0_444_1" data-space="fabricable" title="A3b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_444_1_fab.webp?v=4b641bba75" alt="A3b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
   </div>
   <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>5.2 m</b><span>rank 3 · rough 0.7 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>5.2 m</b><span>rank 2 · rough 0.8 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="mixed">
-  <div class="lbl"><b>M5</b><span class="sp">(3,3,2,2,2) hand-designed · 5 legs</span><span class="chip down" title="rank 4 abstract → 7 fabricable, flat ground">↓3</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="mixed" data-space="abstract" title="M5 in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/mixed_abs.webp?v=e4d077d03d" alt="M5, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="mixed" data-space="fabricable" title="M5 as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/mixed_fab.webp?v=e4d077d03d" alt="M5, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>4.1 m</b><span>rank 4 · rough —</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>2.5 m</b><span>rank 7 · rough 3.9 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_3333_1">
-  <div class="lbl"><b>B4b</b><span class="sp">(3,3,3,3) · 4 legs</span><span class="chip up" title="rank 5 abstract → 1 fabricable, flat ground">↑4</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_3333_1" data-space="abstract" title="B4b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_3333_1_abs.webp?v=e4d077d03d" alt="B4b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_3333_1" data-space="fabricable" title="B4b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_3333_1_fab.webp?v=e4d077d03d" alt="B4b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>3.5 m</b><span>rank 5 · rough —</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>6.4 m</b><span>rank 1 · rough —</span></span>
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>12.9 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>5.2 m</b><span>hw17 · flat · rough 0.8 m</span></span>
   </div>
 </div>
 <div class="card" data-morph="tripod">
-  <div class="lbl"><b>T3</b><span class="sp">(4,4,4) hand-designed · 3 legs</span><span class="chip" title="same rank in both spaces">·0</span></div>
+  <div class="lbl"><b>T3</b><span class="sp">(4,4,4) · 3 legs</span></div>
   <div class="pairs">
-    <button class="half abs" type="button" data-morph="tripod" data-space="abstract" title="T3 in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/tripod_abs.webp?v=e4d077d03d" alt="T3, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half abs" type="button" data-morph="tripod" data-space="abstract" title="T3, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/tripod_abs.webp?v=4b641bba75" alt="T3, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="tripod" data-space="fabricable" title="T3 as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/tripod_fab.webp?v=e4d077d03d" alt="T3, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half fab" type="button" data-morph="tripod" data-space="fabricable" title="T3, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/tripod_fab.webp?v=4b641bba75" alt="T3, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
   </div>
   <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>2.7 m</b><span>rank 6 · rough 6.1 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>3.5 m</b><span>rank 6 · rough —</span></span>
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>11.2 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>3.5 m</b><span>hw17 · flat · rough —</span></span>
   </div>
 </div>
 <div class="card" data-morph="g0_4422_1">
-  <div class="lbl"><b>D4b</b><span class="sp">(4,4,2,2) · 4 legs</span><span class="chip down" title="rank 7 abstract → 17 fabricable, flat ground">↓10</span></div>
+  <div class="lbl"><b>D4b</b><span class="sp">(4,4,2,2) · 4 legs</span></div>
   <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_4422_1" data-space="abstract" title="D4b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4422_1_abs.webp?v=e4d077d03d" alt="D4b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half abs" type="button" data-morph="g0_4422_1" data-space="abstract" title="D4b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4422_1_abs.webp?v=4b641bba75" alt="D4b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_4422_1" data-space="fabricable" title="D4b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4422_1_fab.webp?v=e4d077d03d" alt="D4b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half fab" type="button" data-morph="g0_4422_1" data-space="fabricable" title="D4b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4422_1_fab.webp?v=4b641bba75" alt="D4b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
   </div>
   <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>2.7 m</b><span>rank 7 · rough —</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>—</b><span>rank 17 · rough 0.6 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_4332_1">
-  <div class="lbl"><b>C4b</b><span class="sp">(4,3,3,2) · 4 legs</span><span class="chip down" title="rank 8 abstract → 18 fabricable, flat ground">↓10</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_4332_1" data-space="abstract" title="C4b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4332_1_abs.webp?v=e4d077d03d" alt="C4b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_4332_1" data-space="fabricable" title="C4b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4332_1_fab.webp?v=e4d077d03d" alt="C4b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>2.6 m</b><span>rank 8 · rough —</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>—</b><span>rank 18 · rough 3.4 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="hexapod">
-  <div class="lbl"><b>H6</b><span class="sp">(2,2,2,2,2,2) hand-designed · 6 legs</span><span class="chip up" title="rank 9 abstract → 8 fabricable, flat ground">↑1</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="hexapod" data-space="abstract" title="H6 in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/hexapod_abs.webp?v=e4d077d03d" alt="H6, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="hexapod" data-space="fabricable" title="H6 as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/hexapod_fab.webp?v=e4d077d03d" alt="H6, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>2.5 m</b><span>rank 9 · rough —</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>2.5 m</b><span>rank 8 · rough —</span></span>
-  </div>
-</div>
-<div class="card" data-morph="quadruped">
-  <div class="lbl"><b>Q4</b><span class="sp">(3,3,3,3) hand-designed · 4 legs</span><span class="chip down" title="rank 10 abstract → 12 fabricable, flat ground">↓2</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="quadruped" data-space="abstract" title="Q4 in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/quadruped_abs.webp?v=e4d077d03d" alt="Q4, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="quadruped" data-space="fabricable" title="Q4 as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/quadruped_fab.webp?v=e4d077d03d" alt="Q4, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>2.5 m</b><span>rank 10 · rough 0.8 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>0.9 m</b><span>rank 12 · rough 3.7 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_42222_1">
-  <div class="lbl"><b>E5b</b><span class="sp">(4,2,2,2,2) · 5 legs</span><span class="chip up" title="rank 11 abstract → 9 fabricable, flat ground">↑2</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_42222_1" data-space="abstract" title="E5b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_42222_1_abs.webp?v=e4d077d03d" alt="E5b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_42222_1" data-space="fabricable" title="E5b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_42222_1_fab.webp?v=e4d077d03d" alt="E5b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>2.0 m</b><span>rank 11 · rough 4.9 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>2.2 m</b><span>rank 9 · rough 1.9 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_33222_0">
-  <div class="lbl"><b>F5a</b><span class="sp">(3,3,2,2,2) · 5 legs</span><span class="chip up" title="rank 12 abstract → 5 fabricable, flat ground">↑7</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_33222_0" data-space="abstract" title="F5a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_33222_0_abs.webp?v=e4d077d03d" alt="F5a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_33222_0" data-space="fabricable" title="F5a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_33222_0_fab.webp?v=e4d077d03d" alt="F5a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>1.9 m</b><span>rank 12 · rough 0.1 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>4.4 m</b><span>rank 5 · rough 2.7 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_222222_0">
-  <div class="lbl"><b>G6a</b><span class="sp">(2,2,2,2,2,2) · 6 legs</span><span class="chip" title="same rank in both spaces">·0</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_222222_0" data-space="abstract" title="G6a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_222222_0_abs.webp?v=e4d077d03d" alt="G6a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_222222_0" data-space="fabricable" title="G6a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_222222_0_fab.webp?v=e4d077d03d" alt="G6a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>1.7 m</b><span>rank 13 · rough 1.8 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>0.5 m</b><span>rank 13 · rough 0.4 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_444_0">
-  <div class="lbl"><b>A3a</b><span class="sp">(4,4,4) · 3 legs</span><span class="chip up" title="rank 14 abstract → 3 fabricable, flat ground">↑11</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_444_0" data-space="abstract" title="A3a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_444_0_abs.webp?v=e4d077d03d" alt="A3a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_444_0" data-space="fabricable" title="A3a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_444_0_fab.webp?v=e4d077d03d" alt="A3a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>0.9 m</b><span>rank 14 · rough 0.6 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>4.9 m</b><span>rank 3 · rough 2.3 m</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_33222_1">
-  <div class="lbl"><b>F5b</b><span class="sp">(3,3,2,2,2) · 5 legs</span><span class="chip down" title="rank 15 abstract → 16 fabricable, flat ground">↓1</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_33222_1" data-space="abstract" title="F5b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_33222_1_abs.webp?v=e4d077d03d" alt="F5b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_33222_1" data-space="fabricable" title="F5b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_33222_1_fab.webp?v=e4d077d03d" alt="F5b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>0.7 m</b><span>rank 15 · rough 4.5 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>0.0 m</b><span>rank 16 · rough —</span></span>
-  </div>
-</div>
-<div class="card" data-morph="g0_222222_1">
-  <div class="lbl"><b>G6b</b><span class="sp">(2,2,2,2,2,2) · 6 legs</span><span class="chip up" title="rank 16 abstract → 15 fabricable, flat ground">↑1</span></div>
-  <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_222222_1" data-space="abstract" title="G6b in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_222222_1_abs.webp?v=e4d077d03d" alt="G6b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_222222_1" data-space="fabricable" title="G6b as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_222222_1_fab.webp?v=e4d077d03d" alt="G6b, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
-    </button>
-  </div>
-  <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>0.5 m</b><span>rank 16 · rough —</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>0.5 m</b><span>rank 15 · rough 0.5 m</span></span>
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>10.9 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>—</b><span>hw17 · flat · rough 0.6 m</span></span>
   </div>
 </div>
 <div class="card" data-morph="g0_42222_0">
-  <div class="lbl"><b>E5a</b><span class="sp">(4,2,2,2,2) · 5 legs</span><span class="chip up" title="rank 17 abstract → 10 fabricable, flat ground">↑7</span></div>
+  <div class="lbl"><b>E5a</b><span class="sp">(4,2,2,2,2) · 5 legs</span></div>
   <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_42222_0" data-space="abstract" title="E5a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_42222_0_abs.webp?v=e4d077d03d" alt="E5a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half abs" type="button" data-morph="g0_42222_0" data-space="abstract" title="E5a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_42222_0_abs.webp?v=4b641bba75" alt="E5a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_42222_0" data-space="fabricable" title="E5a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_42222_0_fab.webp?v=e4d077d03d" alt="E5a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half fab" type="button" data-morph="g0_42222_0" data-space="fabricable" title="E5a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_42222_0_fab.webp?v=4b641bba75" alt="E5a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
   </div>
   <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>0.4 m</b><span>rank 17 · rough 5.9 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>1.9 m</b><span>rank 10 · rough 0.2 m</span></span>
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>9.9 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>1.9 m</b><span>hw17 · flat · rough 0.2 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_3333_0">
+  <div class="lbl"><b>B4a</b><span class="sp">(3,3,3,3) · 4 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_3333_0" data-space="abstract" title="B4a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_3333_0_abs.webp?v=4b641bba75" alt="B4a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_3333_0" data-space="fabricable" title="B4a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_3333_0_fab.webp?v=4b641bba75" alt="B4a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>9.8 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>1.2 m</b><span>hw17 · flat · rough 1.8 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_3333_1">
+  <div class="lbl"><b>B4b</b><span class="sp">(3,3,3,3) · 4 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_3333_1" data-space="abstract" title="B4b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_3333_1_abs.webp?v=4b641bba75" alt="B4b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_3333_1" data-space="fabricable" title="B4b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_3333_1_fab.webp?v=4b641bba75" alt="B4b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>8.9 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>6.4 m</b><span>hw17 · flat · rough —</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_4332_0">
+  <div class="lbl"><b>C4a</b><span class="sp">(4,3,3,2) · 4 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_4332_0" data-space="abstract" title="C4a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4332_0_abs.webp?v=4b641bba75" alt="C4a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_4332_0" data-space="fabricable" title="C4a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4332_0_fab.webp?v=4b641bba75" alt="C4a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>8.4 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>4.5 m</b><span>hw17 · flat · rough 4.2 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="quadruped">
+  <div class="lbl"><b>Q4</b><span class="sp">(3,3,3,3) · 4 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="quadruped" data-space="abstract" title="Q4, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/quadruped_abs.webp?v=4b641bba75" alt="Q4, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="quadruped" data-space="fabricable" title="Q4, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/quadruped_fab.webp?v=4b641bba75" alt="Q4, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>7.9 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>0.9 m</b><span>hw17 · flat · rough 3.7 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_4332_1">
+  <div class="lbl"><b>C4b</b><span class="sp">(4,3,3,2) · 4 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_4332_1" data-space="abstract" title="C4b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4332_1_abs.webp?v=4b641bba75" alt="C4b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_4332_1" data-space="fabricable" title="C4b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4332_1_fab.webp?v=4b641bba75" alt="C4b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>7.6 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>—</b><span>hw17 · flat · rough 3.4 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_33222_0">
+  <div class="lbl"><b>F5a</b><span class="sp">(3,3,2,2,2) · 5 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_33222_0" data-space="abstract" title="F5a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_33222_0_abs.webp?v=4b641bba75" alt="F5a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_33222_0" data-space="fabricable" title="F5a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_33222_0_fab.webp?v=4b641bba75" alt="F5a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>7.2 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>4.4 m</b><span>hw17 · flat · rough 2.7 m</span></span>
   </div>
 </div>
 <div class="card" data-morph="g0_4422_0">
-  <div class="lbl"><b>D4a</b><span class="sp">(4,4,2,2) · 4 legs</span><span class="chip up" title="rank 18 abstract → 14 fabricable, flat ground">↑4</span></div>
+  <div class="lbl"><b>D4a</b><span class="sp">(4,4,2,2) · 4 legs</span></div>
   <div class="pairs">
-    <button class="half abs" type="button" data-morph="g0_4422_0" data-space="abstract" title="D4a in the abstract space (capsule proxies) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4422_0_abs.webp?v=e4d077d03d" alt="D4a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half abs" type="button" data-morph="g0_4422_0" data-space="abstract" title="D4a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4422_0_abs.webp?v=4b641bba75" alt="D4a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
-    <span class="arrow" aria-hidden="true">→</span>
-    <button class="half fab" type="button" data-morph="g0_4422_0" data-space="fabricable" title="D4a as the hw17 build (XM430 motors, printed parts) — load in the viewer">
-      <span class="thumb"><img src="figs/thumbs/g0_4422_0_fab.webp?v=e4d077d03d" alt="D4a, fabricable space" width="640" height="480" loading="lazy" decoding="async"></span>
+    <button class="half fab" type="button" data-morph="g0_4422_0" data-space="fabricable" title="D4a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_4422_0_fab.webp?v=4b641bba75" alt="D4a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
     </button>
   </div>
   <div class="pairs stats">
-    <span class="stat abs" title="abstract space: flat ground / rough 30 mm, 20 s displacement of the recorded clip"><b>0.3 m</b><span>rank 18 · rough 2.1 m</span></span>
-    <span class="arrow" aria-hidden="true">→</span>
-    <span class="stat fab" title="fabricable space (hw17 + XM430 model + domain randomisation): flat / rough 30 mm"><b>0.5 m</b><span>rank 14 · rough 0.7 m</span></span>
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>6.2 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>0.5 m</b><span>hw17 · flat · rough 0.7 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_42222_1">
+  <div class="lbl"><b>E5b</b><span class="sp">(4,2,2,2,2) · 5 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_42222_1" data-space="abstract" title="E5b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_42222_1_abs.webp?v=4b641bba75" alt="E5b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_42222_1" data-space="fabricable" title="E5b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_42222_1_fab.webp?v=4b641bba75" alt="E5b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>4.3 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>2.2 m</b><span>hw17 · flat · rough 1.9 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="hexapod">
+  <div class="lbl"><b>H6</b><span class="sp">(2,2,2,2,2,2) · 6 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="hexapod" data-space="abstract" title="H6, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/hexapod_abs.webp?v=4b641bba75" alt="H6, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="hexapod" data-space="fabricable" title="H6, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/hexapod_fab.webp?v=4b641bba75" alt="H6, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>3.5 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>2.5 m</b><span>hw17 · flat · rough —</span></span>
+  </div>
+</div>
+<div class="card" data-morph="mixed">
+  <div class="lbl"><b>M5</b><span class="sp">(3,3,2,2,2) · 5 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="mixed" data-space="abstract" title="M5, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/mixed_abs.webp?v=4b641bba75" alt="M5, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="mixed" data-space="fabricable" title="M5, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/mixed_fab.webp?v=4b641bba75" alt="M5, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>3.2 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>2.5 m</b><span>hw17 · flat · rough 3.9 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_33222_1">
+  <div class="lbl"><b>F5b</b><span class="sp">(3,3,2,2,2) · 5 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_33222_1" data-space="abstract" title="F5b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_33222_1_abs.webp?v=4b641bba75" alt="F5b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_33222_1" data-space="fabricable" title="F5b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_33222_1_fab.webp?v=4b641bba75" alt="F5b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>2.8 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>0.0 m</b><span>hw17 · flat · rough —</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_222222_0">
+  <div class="lbl"><b>G6a</b><span class="sp">(2,2,2,2,2,2) · 6 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_222222_0" data-space="abstract" title="G6a, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_222222_0_abs.webp?v=4b641bba75" alt="G6a, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_222222_0" data-space="fabricable" title="G6a, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_222222_0_fab.webp?v=4b641bba75" alt="G6a, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>0.5 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>0.5 m</b><span>hw17 · flat · rough 0.4 m</span></span>
+  </div>
+</div>
+<div class="card" data-morph="g0_222222_1">
+  <div class="lbl"><b>G6b</b><span class="sp">(2,2,2,2,2,2) · 6 legs</span></div>
+  <div class="pairs">
+    <button class="half abs" type="button" data-morph="g0_222222_1" data-space="abstract" title="G6b, abstract space — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_222222_1_abs.webp?v=4b641bba75" alt="G6b, abstract space" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+    <button class="half fab" type="button" data-morph="g0_222222_1" data-space="fabricable" title="G6b, hw17 build — load in the viewer">
+      <span class="thumb"><img src="figs/thumbs/g0_222222_1_fab.webp?v=4b641bba75" alt="G6b, hw17 build" width="640" height="480" loading="lazy" decoding="async"></span>
+    </button>
+  </div>
+  <div class="pairs stats">
+    <span class="stat abs" title="abstract space (original study): 20 s displacement of the recorded clip on flat ground"><b>0.1 m</b><span>abstract · flat</span></span>
+    <span class="stat fab" title="hw17 build (XM430 motor model, printed parts): 20 s displacement of the recorded clip on flat ground; rough = on the 30 mm field"><b>0.5 m</b><span>hw17 · flat · rough 0.5 m</span></span>
   </div>
 </div>
     </div>
@@ -424,6 +388,6 @@
   </div>
 </footer>
 
-<script type="module" src="viewer.js?v=e4d077d03d"></script>
+<script type="module" src="viewer.js?v=4b641bba75"></script>
 </body>
 </html>

@@ -220,3 +220,8 @@ pre.bib { background: var(--panel); border-radius: 12px; padding: 18px 20px; fon
 .copy:hover { border-color: var(--ink-2); }
 footer { padding: 56px 0 56px; color: var(--muted); font-size: .82rem; text-align: center; }
 footer p { margin: 4px 0; }
+
+/* gallery halves are not a comparison: neutral colours, no arrow column (2026-09-04) */
+.card .pairs, .card .pairs.stats { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.card .arrow { display: none; }
+.card .pairs.stats .stat.abs b, .card .pairs.stats .stat.fab b, .card .half.abs .stat b, .card .half.fab .stat b { color: var(--ink); }
