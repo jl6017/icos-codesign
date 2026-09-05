@@ -225,3 +225,4 @@ footer p { margin: 4px 0; }
 .card .pairs, .card .pairs.stats { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .card .arrow { display: none; }
 .card .pairs.stats .stat.abs b, .card .pairs.stats .stat.fab b, .card .half.abs .stat b, .card .half.fab .stat b { color: var(--ink); }
+.card .pairs.stats .stat b { white-space: nowrap; }
