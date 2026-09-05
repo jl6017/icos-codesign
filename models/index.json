@@ -1,5 +1,5 @@
 {
- "abs_variant": "icos_v2 science pack (capsule) / hw17 motor meshes",
+ "abs_variant": "absvis",
  "morphologies": [
   {
    "id": "quadruped",
@@ -12,14 +12,9 @@
      "meta": "quadruped_abs.json",
      "clips": {
       "flat": {
-       "source": "quadruped_abs_flat_traj.npz",
-       "displacement_final_m": 2.5075113773345947,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "quadruped_abs_rough30_traj.npz",
-       "displacement_final_m": 0.8023558855056763,
-       "seconds": 20.01999955251813
+       "source": "quadruped_r4d2_d25m_sci_traj.npz",
+       "displacement_final_m": 7.863314151763916,
+       "seconds": 20.0
       }
      }
     },
@@ -52,14 +47,9 @@
      "meta": "tripod_abs.json",
      "clips": {
       "flat": {
-       "source": "tripod_abs_flat_traj.npz",
-       "displacement_final_m": 2.739981174468994,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "tripod_abs_rough30_traj.npz",
-       "displacement_final_m": 6.147513389587402,
-       "seconds": 20.01999955251813
+       "source": "tripod_r4d2_d25m_traj.npz",
+       "displacement_final_m": 11.221039772033691,
+       "seconds": 20.0
       }
      }
     },
@@ -87,9 +77,9 @@
      "meta": "mixed_abs.json",
      "clips": {
       "flat": {
-       "source": "mixed_abs_flat_traj.npz",
-       "displacement_final_m": 4.089487075805664,
-       "seconds": 20.01999955251813
+       "source": "mixed_r4d2_d25m_traj.npz",
+       "displacement_final_m": 3.1600773334503174,
+       "seconds": 20.0
       }
      }
     },
@@ -122,9 +112,9 @@
      "meta": "hexapod_abs.json",
      "clips": {
       "flat": {
-       "source": "hexapod_abs_flat_traj.npz",
-       "displacement_final_m": 2.526291847229004,
-       "seconds": 20.01999955251813
+       "source": "hexapod_r4d2_d25m_traj.npz",
+       "displacement_final_m": 3.461322784423828,
+       "seconds": 20.0
       }
      }
     },
@@ -152,14 +142,9 @@
      "meta": "g0_444_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_444_0_abs_flat_traj.npz",
-       "displacement_final_m": 0.9372875690460205,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_444_0_abs_rough30_traj.npz",
-       "displacement_final_m": 0.6289143562316895,
-       "seconds": 20.01999955251813
+       "source": "g0_444_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 17.417781829833984,
+       "seconds": 20.0
       }
      }
     },
@@ -192,14 +177,9 @@
      "meta": "g0_444_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_444_1_abs_flat_traj.npz",
-       "displacement_final_m": 5.1731977462768555,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_444_1_abs_rough30_traj.npz",
-       "displacement_final_m": 0.710396409034729,
-       "seconds": 20.01999955251813
+       "source": "g0_444_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 12.909680366516113,
+       "seconds": 20.0
       }
      }
     },
@@ -232,14 +212,9 @@
      "meta": "g0_3333_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_3333_0_abs_flat_traj.npz",
-       "displacement_final_m": 6.261552810668945,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_3333_0_abs_rough30_traj.npz",
-       "displacement_final_m": 5.160338401794434,
-       "seconds": 20.01999955251813
+       "source": "g0_3333_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 9.818580627441406,
+       "seconds": 20.0
       }
      }
     },
@@ -272,9 +247,9 @@
      "meta": "g0_3333_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_3333_1_abs_flat_traj.npz",
-       "displacement_final_m": 3.538306951522827,
-       "seconds": 20.01999955251813
+       "source": "g0_3333_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 8.866023063659668,
+       "seconds": 20.0
       }
      }
     },
@@ -302,14 +277,9 @@
      "meta": "g0_4332_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_4332_0_abs_flat_traj.npz",
-       "displacement_final_m": 6.657588481903076,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_4332_0_abs_rough30_traj.npz",
-       "displacement_final_m": 10.257168769836426,
-       "seconds": 20.01999955251813
+       "source": "g0_4332_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 8.375825881958008,
+       "seconds": 20.0
       }
      }
     },
@@ -342,9 +312,9 @@
      "meta": "g0_4332_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_4332_1_abs_flat_traj.npz",
-       "displacement_final_m": 2.6156673431396484,
-       "seconds": 20.01999955251813
+       "source": "g0_4332_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 7.590313911437988,
+       "seconds": 20.0
       }
      }
     },
@@ -372,14 +342,9 @@
      "meta": "g0_4422_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_4422_0_abs_flat_traj.npz",
-       "displacement_final_m": 0.2832735478878021,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_4422_0_abs_rough30_traj.npz",
-       "displacement_final_m": 2.096994638442993,
-       "seconds": 20.01999955251813
+       "source": "g0_4422_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 6.198394298553467,
+       "seconds": 20.0
       }
      }
     },
@@ -412,9 +377,9 @@
      "meta": "g0_4422_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_4422_1_abs_flat_traj.npz",
-       "displacement_final_m": 2.723393201828003,
-       "seconds": 20.01999955251813
+       "source": "g0_4422_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 10.943243026733398,
+       "seconds": 20.0
       }
      }
     },
@@ -442,14 +407,9 @@
      "meta": "g0_42222_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_42222_0_abs_flat_traj.npz",
-       "displacement_final_m": 0.4053007960319519,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_42222_0_abs_rough30_traj.npz",
-       "displacement_final_m": 5.886852264404297,
-       "seconds": 20.01999955251813
+       "source": "g0_42222_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 9.932441711425781,
+       "seconds": 20.0
       }
      }
     },
@@ -482,14 +442,9 @@
      "meta": "g0_42222_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_42222_1_abs_flat_traj.npz",
-       "displacement_final_m": 2.037790060043335,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_42222_1_abs_rough30_traj.npz",
-       "displacement_final_m": 4.936242580413818,
-       "seconds": 20.01999955251813
+       "source": "g0_42222_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 4.273514747619629,
+       "seconds": 20.0
       }
      }
     },
@@ -522,14 +477,9 @@
      "meta": "g0_33222_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_33222_0_abs_flat_traj.npz",
-       "displacement_final_m": 1.8561772108078003,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_33222_0_abs_rough30_traj.npz",
-       "displacement_final_m": 0.07507192343473434,
-       "seconds": 20.01999955251813
+       "source": "g0_33222_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 7.1862711906433105,
+       "seconds": 20.0
       }
      }
     },
@@ -562,14 +512,9 @@
      "meta": "g0_33222_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_33222_1_abs_flat_traj.npz",
-       "displacement_final_m": 0.6936068534851074,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_33222_1_abs_rough30_traj.npz",
-       "displacement_final_m": 4.518369197845459,
-       "seconds": 20.01999955251813
+       "source": "g0_33222_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 2.848012924194336,
+       "seconds": 20.0
       }
      }
     },
@@ -597,14 +542,9 @@
      "meta": "g0_222222_0_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_222222_0_abs_flat_traj.npz",
-       "displacement_final_m": 1.6793211698532104,
-       "seconds": 20.01999955251813
-      },
-      "rough30": {
-       "source": "g0_222222_0_abs_rough30_traj.npz",
-       "displacement_final_m": 1.844842791557312,
-       "seconds": 20.01999955251813
+       "source": "g0_222222_0_r4d2_d25m_traj.npz",
+       "displacement_final_m": 0.45241308212280273,
+       "seconds": 20.0
       }
      }
     },
@@ -637,9 +577,9 @@
      "meta": "g0_222222_1_abs.json",
      "clips": {
       "flat": {
-       "source": "g0_222222_1_abs_flat_traj.npz",
-       "displacement_final_m": 0.5370977520942688,
-       "seconds": 20.01999955251813
+       "source": "g0_222222_1_r4d2_d25m_traj.npz",
+       "displacement_final_m": 0.1323889046907425,
+       "seconds": 20.0
       }
      }
     },
@@ -661,5 +601,6 @@
     }
    }
   }
- ]
+ ],
+ "note": "abstract space = original Genesis-trained abstract clips (collaborator's build, flat only); fabricable space = hw17 build trained in icos_v2 (flat + rough30)"
 }
