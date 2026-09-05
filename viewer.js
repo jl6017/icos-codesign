@@ -127,7 +127,7 @@ function flatGround(kind) {
 async function setTerrain(kind, pathXY) {
   if (terrainGroup) { scene.remove(terrainGroup); terrainGroup.traverse((o) => { if (o.geometry) o.geometry.dispose(); }); }
   terrainGroup = new THREE.Group();
-  if (kind === 'rubble' || kind === 'stones') {
+  if (kind === 'rubble' || kind === 'stones' || kind === 'rough30') {   // stepped heightfield mesh from models/terrain_<kind>.json
     const t = await loadTerrain(kind);
     let xmin = 1e9, xmax = -1e9, ymin = 1e9, ymax = -1e9;
     for (const [x, y] of pathXY) { xmin = Math.min(xmin, x); xmax = Math.max(xmax, x); ymin = Math.min(ymin, y); ymax = Math.max(ymax, y); }
